@@ -1,14 +1,38 @@
-:root {
-  --main-white: #fff;
-  --hero--header-col: #464547;
-  --hero--text-col: #666666;
-  --footer--text-col: rgba(255, 255, 255, 0.4);
-  --main--btn-col: #55C2D8;
-}
-
-@media (max-width: 480px) {
-  h1 {
-    color: rgb(77, 37, 37);
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 50px 30px;
+  }
+  .navbar {
+    padding: 0 30px;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    right: -100;
+    height: 90vh;
+    top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(85, 194, 216, 0.6352941176);
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 1;
+  }
+  .navbar .menu-icon {
+    display: block;
+  }
+  .navbar-nav_active {
+    transform: translateX(-100%);
+  }
+  .manu-icon_active .top {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .manu-icon_active .middle {
+    opacity: 0;
+  }
+  .manu-icon_active .bottom {
+    transform: rotate(45deg) translate(-5px, -6px);
   }
 }
 

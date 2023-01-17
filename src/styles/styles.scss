@@ -1,20 +1,83 @@
 /* Import Fonts From GoogleFonts */
-@use "kit/index" as using;
+@use "kit/index" as u;
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap");
-@import url("mobile.scss");
 /* Deafaults */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+body {
+  font-family: "Source Sans Pro";
+}
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @include using.heading-styling;
-  color: var(--main-white);
+h2 {
+  @include u.heading-styling;
+}
+.container {
+  padding: 100px 250px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  background-color: #272727; //
+  padding: 0 250px;
+}
+
+.navbar .logo {
+  @include u.logo-setting;
+}
+.navbar-nav {
+  @include u.navbar-setting;
+}
+.navbar-nav li {
+  display: inline-block;
+}
+
+.navbar-nav .nav__link {
+  @include u.nav-link-setting;
+}
+.navbar-nav .nav__link,
+.navbar-nav .nav__link::after,
+.navbar-nav .nav__link::before {
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav__link:hover {
+  color: u.$main--btn-col;
+}
+.navbar-nav .nav__link {
+  position: relative;
+}
+.navbar-nav .nav__link::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background-color: u.$main-white;
+  height: 1px;
+}
+.navbar-nav .nav__link:hover:after {
+  width: 80%;
+  background-color: u.$main--btn-col;
+}
+.navbar .menu-icon {
+  cursor: pointer;
+  margin: 20px;
+  display: none;
+}
+.navbar .menu-icon div {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: u.$main-white;
+  transition: 0.3s ease-in-out;
 }

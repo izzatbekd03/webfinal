@@ -6,9 +6,34 @@
   line-height: 64px;
   text-align: center;
 }
-@mixin link-styling {
+@mixin logo-setting {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
 }
-@mixin nav-link-styling {
+@mixin navbar-setting {
+  list-style: none;
+  text-align: center;
+  text-decoration: none;
+}
+@mixin nav-link-setting {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 20px;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.2em;
 }
 
 @mixin secondary-heading-styling {
@@ -28,14 +53,14 @@
   line-height: 22px;
 }
 
-//Responsive mixins 
+//---------------------------------  Responsive breakpoint mixins  ------------------------------------------------
 $breadpoints-up: (
   "mobile": 480px,
   "tablet": 700px,
   "laptop": 1200px,
 );
 @mixin breakpoint($size) {
-  @media (max-width: (map-get($breadpoints-up, $size))) {
+  @media screen and (max-width: (map-get($breadpoints-up, $size))) {
     @content;
   }
 }
