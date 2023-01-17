@@ -21,11 +21,15 @@ h2 {
   text-align: center;
 }
 
+p {
+  text-align: center;
+}
+
 .container {
   padding: 100px 250px;
 }
 
-.navbar {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,7 +38,7 @@ h2 {
   padding: 0 250px;
 }
 
-.navbar .logo {
+header .logo {
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 600;
@@ -45,17 +49,16 @@ h2 {
   cursor: pointer;
 }
 
-.navbar-nav {
+.navbar ul {
   list-style: none;
   text-align: center;
-  text-decoration: none;
 }
 
-.navbar-nav li {
+.navbar ul li {
   display: inline-block;
 }
 
-.navbar-nav .nav__link {
+.navbar ul li .nav__link {
   display: block;
   text-decoration: none;
   padding: 10px;
@@ -70,21 +73,21 @@ h2 {
   letter-spacing: 0.2em;
 }
 
-.navbar-nav .nav__link,
-.navbar-nav .nav__link::after,
-.navbar-nav .nav__link::before {
+.navbar ul li .nav__link,
+.navbar ul li .nav__link::after,
+.navbar ul li .nav__link::before {
   transition: all 0.3s ease-in-out;
 }
 
-.navbar-nav .nav__link:hover {
+.navbar ul li .nav__link:hover {
   color: #55c2d8;
 }
 
-.navbar-nav .nav__link {
+.navbar ul li .nav__link {
   position: relative;
 }
 
-.navbar-nav .nav__link::after {
+.navbar ul li .nav__link::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -97,22 +100,13 @@ h2 {
   height: 1px;
 }
 
-.navbar-nav .nav__link:hover:after {
+.navbar ul li .nav__link:hover:after {
   width: 80%;
   background-color: #55c2d8;
 }
 
-.navbar .menu-icon {
-  cursor: pointer;
-  margin: 20px;
-}
-
-.navbar .menu-icon div {
-  width: 25px;
-  height: 3px;
-  margin: 5px;
-  background-color: rgb(255, 255, 255);
-  transition: 0.3s ease-in-out;
+.navbar .hamburger {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

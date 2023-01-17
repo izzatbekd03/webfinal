@@ -15,11 +15,14 @@ h1,
 h2 {
   @include u.heading-styling;
 }
+p {
+  text-align: center;
+}
 .container {
   padding: 100px 250px;
 }
 
-.navbar {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,32 +31,32 @@ h2 {
   padding: 0 250px;
 }
 
-.navbar .logo {
+header .logo {
   @include u.logo-setting;
 }
-.navbar-nav {
+.navbar ul {
   @include u.navbar-setting;
 }
-.navbar-nav li {
+.navbar ul li {
   display: inline-block;
 }
 
-.navbar-nav .nav__link {
+.navbar ul li .nav__link {
   @include u.nav-link-setting;
 }
-.navbar-nav .nav__link,
-.navbar-nav .nav__link::after,
-.navbar-nav .nav__link::before {
+.navbar ul li .nav__link,
+.navbar ul li .nav__link::after,
+.navbar ul li .nav__link::before {
   transition: all 0.3s ease-in-out;
 }
 
-.navbar-nav .nav__link:hover {
+.navbar ul li .nav__link:hover {
   color: u.$main--btn-col;
 }
-.navbar-nav .nav__link {
+.navbar ul li .nav__link {
   position: relative;
 }
-.navbar-nav .nav__link::after {
+.navbar ul li .nav__link::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -65,19 +68,11 @@ h2 {
   background-color: u.$main-white;
   height: 1px;
 }
-.navbar-nav .nav__link:hover:after {
+.navbar ul li .nav__link:hover:after {
   width: 80%;
   background-color: u.$main--btn-col;
 }
-.navbar .menu-icon {
-  cursor: pointer;
-  margin: 20px;
-  // display: none;
-}
-.navbar .menu-icon div {
-  width: 25px;
-  height: 3px;
-  margin: 5px;
-  background-color: u.$main-white;
-  transition: 0.3s ease-in-out;
+
+.navbar .hamburger {
+  display: none;
 }
