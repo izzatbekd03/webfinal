@@ -2,19 +2,12 @@
 
 @include u.breakpoint(desktop) {
 }
-
-@include u.breakpoint(tablet) {
+@include u.breakpoint(tablet-big) {
   .container {
-    padding: 30px 50px;
-  }
-}
-
-@include u.breakpoint(mobile) {
-  .container {
-    padding: 10px 30px;
+    padding: 50px 100px;
   }
   header {
-    padding: 0 30px;
+    padding: 50px 100px;
   }
   header .hamburger {
     display: block;
@@ -24,10 +17,39 @@
     width: 30px;
     height: 3px;
     background: u.$main-white;
-    margin: 6px 0;
+    border-radius: 3px;
+    transition: all 0.1s ease-in-out;
+  }
+  header .hamburger .line::before,
+  header .hamburger .line::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: u.$main-white;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  header .hamburger .line::before {
+    transform: translateY(-8px);
+  }
+  header .hamburger .line::after {
+    transform: translateY(8px);
+  }
+  // Animation
+  header .hamburger.open .line {
+    // transform: translateX(-30px);
+    background: transparent;
+    box-shadow: none;
+  }
+  header .hamburger.open .line::before {
+    transform: rotate(45deg);
+  }
+  header .hamburger.open .line::after {
+    transform: rotate(-45deg);
   }
   header .navbar {
-    height: 450px;
+    height: 0;
     position: absolute;
     top: 10vh;
     left: 0;
@@ -35,12 +57,58 @@
     width: 100vw;
     background: u.$navbar-bg;
     transition: 0.2s ease-in-out;
+    overflow: hidden;
+  }
+  header .navbar.active {
+    height: 450px;
   }
   .navbar ul {
     display: block;
     width: fit-content;
     margin: 10vh auto 0 auto;
-    padding: 0 23%;
+    padding: 0 39%;
     text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .navbar.active ul {
+    opacity: 1;
+  }
+  .navbar ul li a {
+    margin-bottom: 12px;
+    color: black;
+  }
+}
+
+// ---------------------------------------- Max 700px ----------------------------------------------
+@include u.breakpoint(tablet) {
+  .container {
+    padding: 50px 100px;
+  }
+  header {
+    padding: 0 100px;
+  }
+  .navbar ul {
+    padding: 0 31%;
+  }
+}
+
+// ---------------------------------------- Max 630px ----------------------------------------------
+@include u.breakpoint(mobile-big) {
+  .container {
+    padding: 10px 50px;
+  }
+  header {
+    padding: 0 30px;
+  }
+}
+
+// ---------------------------------------- Max 480px ----------------------------------------------
+@include u.breakpoint(mobile) {
+  .container {
+    padding: 10px 30px;
+  }
+  header {
+    padding: 0 30px;
   }
 }

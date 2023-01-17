@@ -1,10 +1,6 @@
-const resnav = () =>{
-    const menu = document.querySelector(".menu-icon");
-    const nav = document.querySelector(".navbar-nav");
-
-    menu.addEventListener('click', () =>{
-        menu.classList.toggle('menu-icon_active');
-        nav.classList.toggle('navbar-nav_active');
-    });
+const hamburger = document.querySelector(".hamburger");
+hamburger.onclick = function(){
+    const navBar = document.querySelector(".navbar");
+    navBar.classList.toggle("active");
+    hamburger.classList.toggle("open");
 }
-resnav();

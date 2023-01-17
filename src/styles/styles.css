@@ -26,7 +26,7 @@ p {
 }
 
 .container {
-  padding: 100px 250px;
+  padding: 100px 150px;
 }
 
 header {
@@ -35,7 +35,7 @@ header {
   align-items: center;
   height: 10vh;
   background-color: #272727;
-  padding: 0 250px;
+  padding: 0 150px;
 }
 
 header .logo {

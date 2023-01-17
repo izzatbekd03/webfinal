@@ -56,11 +56,19 @@
 //---------------------------------  Responsive breakpoint mixins  ------------------------------------------------
 $breadpoints-up: (
   "mobile": 480px,
+  "mobile-big": 630px,
   "tablet": 700px,
+  "tablet-big": 958px,
   "desktop": 1200px,
 );
 @mixin breakpoint($size) {
   @media only screen and (max-width: (map-get($breadpoints-up, $size))) {
+    @content;
+  }
+}
+
+@mixin breakpoint-min($size) {
+  @media only screen and (min-width: (map-get($breadpoints-up, $size))) {
     @content;
   }
 }
