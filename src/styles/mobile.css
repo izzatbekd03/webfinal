@@ -1,3 +1,42 @@
-
+@media only screen and (max-width: 700px) {
+  .container {
+    padding: 30px 50px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container {
+    padding: 10px 30px;
+  }
+  header {
+    padding: 0 30px;
+  }
+  header .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  header .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    margin: 6px 0;
+  }
+  header .navbar {
+    height: 450px;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #0b1925;
+    transition: 0.2s ease-in-out;
+  }
+  .navbar ul {
+    display: block;
+    width: fit-content;
+    margin: 10vh auto 0 auto;
+    padding: 0 23%;
+    text-align: center;
+  }
+}
 
 /*# sourceMappingURL=mobile.css.map */

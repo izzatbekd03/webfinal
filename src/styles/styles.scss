@@ -33,6 +33,7 @@ header {
 
 header .logo {
   @include u.logo-setting;
+  color: u.$main-white;
 }
 .navbar ul {
   @include u.navbar-setting;

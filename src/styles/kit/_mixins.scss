@@ -19,6 +19,7 @@
 @mixin navbar-setting {
   list-style: none;
   text-align: center;
+  display: flex;
 }
 @mixin nav-link-setting {
   display: block;
@@ -56,10 +57,10 @@
 $breadpoints-up: (
   "mobile": 480px,
   "tablet": 700px,
-  "laptop": 1200px,
+  "desktop": 1200px,
 );
 @mixin breakpoint($size) {
-  @media screen and (max-width: (map-get($breadpoints-up, $size))) {
+  @media only screen and (max-width: (map-get($breadpoints-up, $size))) {
     @content;
   }
 }
