@@ -106,7 +106,7 @@
 // ---------------------------------------- Max 480px ----------------------------------------------
 @include u.breakpoint(mobile) {
   .container {
-    padding: 10px 5px;
+    padding: 10px 20px;
   }
   header {
     padding: 0 30px;
