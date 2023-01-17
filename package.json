@@ -1,0 +1,23 @@
+{
+  "name": "webfinal",
+  "version": "1.0.0",
+  "description": "This is final assesment from Fundamentals of Web development 2022-2023 1st Semester ITPU Uzbekistan",
+  "main": "index.js",
+  "scripts": {
+    "node-sass": "sass -w src/styles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/izzatbekd03/webfinal.git"
+  },
+  "keywords": [],
+  "author": "Izzatbek Dadamirzaev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/izzatbekd03/webfinal/issues"
+  },
+  "homepage": "https://github.com/izzatbekd03/webfinal#readme",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
