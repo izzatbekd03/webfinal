@@ -1,0 +1,7 @@
+@use "kit/index" as using;
+
+@include using.breakpoint(mobile) {
+  h1 {
+    color: rgb(77, 37, 37);
+  }
+}

@@ -1,0 +1,3 @@
+// I am using this index file to forward my kits to main styling scss file for not using all like this. @use "patch/name" as <name>
+@forward 'mixins';
+@forward 'variables';
