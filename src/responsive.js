@@ -4,7 +4,7 @@ const resnav = () =>{
 
     menu.addEventListener('click', () =>{
         menu.classList.toggle('menu-icon_active');
-        nav.classList.toggle('.navbar-nav_active');
+        nav.classList.toggle('navbar-nav_active');
     });
 }
 resnav();

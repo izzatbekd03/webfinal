@@ -36,13 +36,14 @@
   }
   .manu-icon_active .bottom {
     transform: rotate(45deg) translate(-5px, -6px);
+    background-color: black;
   }
 }
 
 @include u.breakpoint(tablet) {
-  .navbar .navbar-nav {
-    // width: 60%;
-  }
+  // .navbar .navbar-nav {
+  //   // width: 60%;
+  // }
   body {
     overflow: hidden;
   }
