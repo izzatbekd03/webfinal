@@ -19,6 +19,7 @@ h2 {
   font-size: 48px;
   line-height: 64px;
   text-align: center;
+  margin: 30px 0;
 }
 
 p {
@@ -30,11 +31,14 @@ p {
 }
 
 header {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 10vh;
-  background-color: #272727;
+  background: linear-gradient(rgba(0, 0, 0, 0.631372549), rgba(0, 0, 0, 0));
   padding: 0 150px;
 }
 
@@ -109,6 +113,149 @@ header .logo {
 
 .navbar .hamburger {
   display: none;
+}
+
+.hero {
+  background-image: url(../assets/bg1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+}
+
+.hero .container {
+  text-align: center;
+  padding: 40vh 30vw 19vh 30vw;
+}
+
+.hero .container p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 30px 0;
+}
+
+.hero .container h1 {
+  color: #fff;
+}
+
+main {
+  text-align: center;
+}
+
+main .container {
+  padding: 50px 150px;
+}
+
+main .container h1 {
+  color: #464547;
+}
+
+main .container .sub-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 30px 0;
+  color: #666;
+  padding: 0 25%;
+}
+
+main .container .asides {
+  display: flex;
+  margin-bottom: 1em;
+}
+
+main .container .asides p {
+  color: #000;
+  text-align: left;
+  padding: 2em;
+  width: 50%;
+}
+
+main .container .main-btn {
+  font-family: "Oswald";
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  background-color: #55c2d8;
+  color: rgb(255, 255, 255);
+}
+
+.learn-more {
+  background-image: url(../assets/bg2.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.learn-more .container {
+  padding: 50px 150px;
+  text-align: center;
+}
+
+.learn-more .container h1 {
+  color: #fff;
+}
+
+.learn-more .container .polygon {
+  color: rgb(255, 255, 255);
+}
+
+.learn-more .container .sec-heading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 30px 0;
+  padding: 0 30%;
+}
+
+footer {
+  background-color: #464547;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+footer p,
+footer a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+footer a {
+  padding-top: 30px;
+}
+
+footer .footer-logo p {
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  margin-left: 1em;
+  letter-spacing: 0.2em;
+  font-size: 18px;
+  line-height: 16px;
+}
+
+footer span {
+  height: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
