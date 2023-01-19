@@ -182,7 +182,7 @@ main .container .main-btn {
   font-family: "Oswald";
   text-decoration: none;
   text-transform: uppercase;
-  padding: 0.5em 1em;
+  padding: 0.5em 1.8em;
   border-radius: 2em;
   letter-spacing: 0.1em;
   font-weight: 400;
@@ -207,10 +207,6 @@ main .container .main-btn {
   color: #fff;
 }
 
-.learn-more .container .polygon {
-  color: rgb(255, 255, 255);
-}
-
 .learn-more .container .sec-heading {
   font-style: normal;
   font-weight: 400;
@@ -222,15 +218,43 @@ main .container .main-btn {
   padding: 0 30%;
 }
 
-.learn-more .play-btn img {
-  position: relative;
+.learn-more .play-btn {
+  height: 140px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.learn-more .play-btn .polygon {
-  position: relative;
-  top: -77px;
-  right: -5px;
-  font-size: 40px;
+.learn-more .play-btn .circle {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 140px;
+  height: 140px;
+  background-color: #55c2d8;
+  margin: 0 auto;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.learn-more .play-btn .circle:hover {
+  background-color: rgb(255, 255, 255);
+  width: 130px;
+  height: 130px;
+}
+
+.learn-more .play-btn .circle:hover > .polygon {
+  color: #55c2d8;
+  font-size: 65px;
+}
+
+.learn-more .play-btn .circle .polygon {
+  color: rgb(255, 255, 255);
+  font-size: 70px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 footer {
