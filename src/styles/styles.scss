@@ -154,41 +154,54 @@ main .container .main-btn {
   @include u.sec-heading-style;
   padding: 0 30%;
 }
-.learn-more .container .play-btn img {
+
+.learn-more .play-btn img {
+  position: relative;
+}
+.learn-more .play-btn .polygon {
+  position: relative;
+  top: -75px;
+  right: -3px;
+  font-size: 40px;
 }
 
-// Navbar section
 footer {
   background-color: u.$footer-bg;
 }
 footer .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-rows: 90%;
+  grid-template-columns: 25% 25% 25% 25%;
 }
 footer p,
 footer a {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
   color: rgba(255, 255, 255, 0.4);
-}
-footer a {
-  padding-top: 30px;
-}
-footer .footer-logo {
+  text-decoration: none;
+  text-align: left;
 }
 footer .footer-logo p {
-  text-transform: uppercase;
-  color: u.$main-white;
+  @include u.logo-setting;
   display: inline-block;
-  margin-left: 1em;
-  letter-spacing: 0.2em;
-  font-size: 18px;
-  line-height: 16px;
+  color: u.$main-white;
 }
-footer .copright {
+footer .footer-logo {
+  grid-column: span 1;
+  display: flex;
+  align-items: center;
 }
-footer span {
-  height: 20px;
+footer .footer-logo img {
+  height: 1.5em;
+  padding-right: 1em;
+}
+footer .footer-info {
+  grid-column: span 3;
+}
+footer .emailing {
+  grid-row: 3/3;
+  grid-column: 2/2;
+}
+footer .footer-copy {
+  grid-column: 4/4;
+  grid-row: 3/3;
+  text-align: right !important;
 }
