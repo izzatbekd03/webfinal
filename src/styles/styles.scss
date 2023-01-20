@@ -151,7 +151,10 @@ main .container .main-btn {
 }
 main .container .main-btn:hover {
   transition: all 0.5s ease-in-out;
-  transform: rotate(15deg);
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -ms-transform-origin: 20% 40%; /* IE 9 */
+  transform: rotate(45deg);
+  transform-origin: 20% 40%;
   background-color: #000;
 }
 
