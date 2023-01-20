@@ -38,7 +38,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 10vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.631372549), rgba(0, 0, 0, 0));
+  background: linear-gradient(rgba(0, 0, 0, 0.1647058824), rgba(0, 0, 0, 0));
   padding: 0 150px;
 }
 
@@ -120,6 +120,7 @@ header .logo {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  background-position: center;
   height: 100vh;
 }
 
@@ -142,12 +143,27 @@ header .logo {
   color: #fff;
 }
 
-main {
-  text-align: center;
+.hero .logo-anim {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
 }
 
-main .container {
-  padding: 50px 150px;
+.hero img {
+  animation: rotation-key 1s ease-in infinite 1s;
+}
+
+@keyframes rotation-key {
+  100% {
+    transform: rotateY(180deg);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+}
+main {
+  text-align: center;
 }
 
 main .container h1 {
@@ -172,7 +188,7 @@ main .container .asides {
 }
 
 main .container .asides p {
-  color: #000;
+  color: #666666;
   text-align: left;
   padding: 2em;
   width: 50%;
@@ -190,6 +206,12 @@ main .container .main-btn {
   line-height: 26px;
   background-color: #55c2d8;
   color: rgb(255, 255, 255);
+}
+
+main .container .main-btn:hover {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(15deg);
+  background-color: #000;
 }
 
 .learn-more {

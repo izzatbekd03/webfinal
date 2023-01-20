@@ -80,10 +80,10 @@
   }
 }
 
-// ---------------------------------------- Max 700px ----------------------------------------------
+// ---------------------------------------- Max 768px ----------------------------------------------
 @include u.breakpoint(tablet) {
   .container {
-    padding: 50px 100px;
+    padding: 100px 50px !important;
   }
   header {
     padding: 0 100px;
@@ -91,24 +91,97 @@
   .navbar ul {
     padding: 0 31%;
   }
+  #hero .container {
+    padding: 250px 50px !important;
+  }
+  .learn-more .container .sec-heading {
+    padding: 0;
+  }
+  .learn-more .play-btn .circle {
+    width: 100px;
+    height: 100px;
+  }
+  .learn-more .play-btn .circle:hover {
+    background-color: u.$main-white;
+    width: 70px;
+    height: 70px;
+  }
+  .learn-more .play-btn .circle:hover > .polygon {
+    color: u.$main--btn-col;
+    font-size: 35px;
+  }
+  .learn-more .play-btn .circle .polygon {
+    font-size: 50px;
+  }
 }
 
 // ---------------------------------------- Max 630px ----------------------------------------------
-@include u.breakpoint(mobile-big) {
-  .container {
-    padding: 10px 50px;
-  }
-  header {
-    padding: 0 30px;
-  }
-}
 
 // ---------------------------------------- Max 480px ----------------------------------------------
 @include u.breakpoint(mobile) {
   .container {
-    padding: 10px 20px;
+    padding: 100px 20px;
   }
   header {
     padding: 0 30px;
+  }
+  //---------------- Hero section -----------------------------------
+  #hero .container {
+    padding: 250px 20px 50px 20px;
+  }
+  //---------------- Main section ----------------------------------
+  main .container {
+    padding: 150px 20px;
+  }
+  main .container .sub-text {
+    padding: 0 2%;
+  }
+  main .container .asides {
+    flex-direction: column;
+  }
+  main .container .asides p {
+    width: 100%;
+    padding: 25px 0;
+  }
+  //---------------- Learn more section -----------------------------
+  .learn-more .container {
+    padding: 150px 20px;
+  }
+  .learn-more .container .sec-heading {
+    padding: 0;
+  }
+  .learn-more .play-btn .circle {
+    width: 100px;
+    height: 100px;
+  }
+  .learn-more .play-btn .circle:hover {
+    background-color: u.$main-white;
+    width: 70px;
+    height: 70px;
+  }
+  .learn-more .play-btn .circle:hover > .polygon {
+    color: u.$main--btn-col;
+    font-size: 35px;
+  }
+  .learn-more .play-btn .circle .polygon {
+    font-size: 50px;
+  }
+  //---------------- Footer section -----------------------------
+  footer .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center !important;
+    // padding: ;
+  }
+  footer .footer-logo {
+    justify-content: center;
+  }
+
+  footer p,
+  footer a {
+    text-align: center;
+  }
+  footer p {
+    padding: 15px 0;
   }
 }

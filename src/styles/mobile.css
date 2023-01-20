@@ -75,7 +75,7 @@
 }
 @media only screen and (max-width: 768px) {
   .container {
-    padding: 50px 100px;
+    padding: 100px 50px !important;
   }
   header {
     padding: 0 100px;
@@ -83,21 +83,88 @@
   .navbar ul {
     padding: 0 31%;
   }
+  #hero .container {
+    padding: 250px 50px !important;
+  }
+  .learn-more .container .sec-heading {
+    padding: 0;
+  }
+  .learn-more .play-btn .circle {
+    width: 100px;
+    height: 100px;
+  }
+  .learn-more .play-btn .circle:hover {
+    background-color: rgb(255, 255, 255);
+    width: 70px;
+    height: 70px;
+  }
+  .learn-more .play-btn .circle:hover > .polygon {
+    color: #55c2d8;
+    font-size: 35px;
+  }
+  .learn-more .play-btn .circle .polygon {
+    font-size: 50px;
+  }
 }
 @media only screen and (max-width: 630px) {
   .container {
-    padding: 10px 50px;
+    padding: 100px 20px;
   }
   header {
     padding: 0 30px;
   }
-}
-@media only screen and (max-width: 480px) {
-  .container {
-    padding: 10px 20px;
+  #hero .container {
+    padding: 250px 20px 50px 20px;
   }
-  header {
-    padding: 0 30px;
+  main .container {
+    padding: 150px 20px;
+  }
+  main .container .sub-text {
+    padding: 0 2%;
+  }
+  main .container .asides {
+    flex-direction: column;
+  }
+  main .container .asides p {
+    width: 100%;
+    padding: 25px 0;
+  }
+  .learn-more .container {
+    padding: 150px 20px;
+  }
+  .learn-more .container .sec-heading {
+    padding: 0;
+  }
+  .learn-more .play-btn .circle {
+    width: 100px;
+    height: 100px;
+  }
+  .learn-more .play-btn .circle:hover {
+    background-color: rgb(255, 255, 255);
+    width: 70px;
+    height: 70px;
+  }
+  .learn-more .play-btn .circle:hover > .polygon {
+    color: #55c2d8;
+    font-size: 35px;
+  }
+  .learn-more .play-btn .circle .polygon {
+    font-size: 50px;
+  }
+  footer .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center !important;
+  }
+  footer .footer-logo {
+    justify-content: center;
+  }
+  footer p,
+  footer a {
+    text-align: center;
+  }
+  footer p {
+    padding: 15px 0;
   }
 }
 

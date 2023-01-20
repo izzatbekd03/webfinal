@@ -31,7 +31,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 10vh;
-  background: linear-gradient(#000000a1, #00000000);
+  background: linear-gradient(#0000002a, #00000000);
   padding: 0 150px;
 }
 
@@ -89,6 +89,7 @@ header .logo {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  background-position: center;
   height: 100vh;
 }
 
@@ -103,13 +104,27 @@ header .logo {
 .hero .container h1 {
   color: #fff;
 }
+.hero .logo-anim {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+}
+.hero img {
+  animation: rotation-key 1s ease-in infinite 1s;
+}
+@keyframes rotation-key {
+  100% {
+    transform: rotateY(180deg);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+}
 
 //Main section ------------------------------------------------------------------------------------
 main {
   text-align: center;
-}
-main .container {
-  padding: 50px 150px;
 }
 main .container h1 {
   color: #464547;
@@ -124,7 +139,7 @@ main .container .asides {
   margin-bottom: 1em;
 }
 main .container .asides p {
-  color: #000;
+  color: #666666;
   text-align: left;
   padding: 2em;
   width: 50%;
@@ -134,12 +149,11 @@ main .container .main-btn {
   background-color: u.$main--btn-col;
   color: u.$main-white;
 }
-// main .container .main-btn:hover {
-//   position: relative;
-//   transition: all 0.5s ease-in-out;
-//   transform: translateY(15deg);
-//   background-color: #000;
-// }
+main .container .main-btn:hover {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(15deg);
+  background-color: #000;
+}
 
 // Learn-more section ------------------------------------------------------------------------------------
 .learn-more {
