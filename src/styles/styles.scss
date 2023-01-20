@@ -145,17 +145,22 @@ main .container .asides p {
   width: 50%;
 }
 main .container .main-btn {
-  @include u.main-btn;
   background-color: u.$main--btn-col;
+  color: u.$main-white;
+  @include u.main-btn;
+  border-color: u.$main--btn-col;
+  border-style: none;
+  transition: all 0.5s ease-in-out;
+}
+main .container .main-btn a {
+  text-decoration: none;
   color: u.$main-white;
 }
 main .container .main-btn:hover {
-  transition: all 0.5s ease-in-out;
-  -ms-transform: rotate(45deg); /* IE 9 */
+  -ms-transform: rotate(15deg); /* IE 9 */
   -ms-transform-origin: 20% 40%; /* IE 9 */
-  transform: rotate(45deg);
+  transform: rotate(15deg);
   transform-origin: 20% 40%;
-  background-color: #000;
 }
 
 // Learn-more section ------------------------------------------------------------------------------------

@@ -195,6 +195,8 @@ main .container .asides p {
 }
 
 main .container .main-btn {
+  background-color: #55c2d8;
+  color: rgb(255, 255, 255);
   font-family: "Oswald";
   text-decoration: none;
   text-transform: uppercase;
@@ -204,17 +206,21 @@ main .container .main-btn {
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
-  background-color: #55c2d8;
+  border-color: #55c2d8;
+  border-style: none;
+  transition: all 0.5s ease-in-out;
+}
+
+main .container .main-btn a {
+  text-decoration: none;
   color: rgb(255, 255, 255);
 }
 
 main .container .main-btn:hover {
-  transition: all 0.5s ease-in-out;
-  -ms-transform: rotate(45deg); /* IE 9 */
+  -ms-transform: rotate(15deg); /* IE 9 */
   -ms-transform-origin: 20% 40%; /* IE 9 */
-  transform: rotate(45deg);
+  transform: rotate(15deg);
   transform-origin: 20% 40%;
-  background-color: #000;
 }
 
 .learn-more {
