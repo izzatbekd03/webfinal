@@ -75,7 +75,7 @@
 }
 @media only screen and (max-width: 768px) {
   .container {
-    padding: 100px 50px !important;
+    padding: 100px 50px;
   }
   header {
     padding: 0 100px;
@@ -84,7 +84,7 @@
     padding: 0 31%;
   }
   #hero .container {
-    padding: 250px 50px !important;
+    padding: 250px 50px;
   }
   .learn-more .container .sec-heading {
     padding: 0;
@@ -165,6 +165,15 @@
   }
   footer p {
     padding: 15px 0;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  #hero .container {
+    padding: 250px 50px;
   }
 }
 

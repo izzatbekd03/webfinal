@@ -66,6 +66,7 @@
 
 //---------------------------------  Responsive breakpoint mixins  ------------------------------------------------
 $breadpoints-up: (
+  "mobile-s": 320px,
   "mobile": /*480px,*/ 630px,
   "mobile-big": 630px,
   "tablet": 768px,
