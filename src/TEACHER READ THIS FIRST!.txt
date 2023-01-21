@@ -1,4 +1,4 @@
-The index fole in the location with this is not a projects index file.
+The index.html in the location with this is not a projects index file.
 I am using this index.html to deploy the site to Netlify to make sure the mobile version is working correctly.
 Please just ignore this txt file and index.html.
 You can check the website with this link: https://webfinal-itpu.netlify.app/
